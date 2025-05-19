@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GameStarts.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DESKTOP-3R89RCL</Value>
+    </Setting>
+    <Setting Name="BDName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ProjectKr</Value>
+    </Setting>
+    <Setting Name="BDUserLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FVST</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">174321</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

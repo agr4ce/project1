@@ -1,0 +1,44 @@
+﻿<Page x:Class="GameStarts.Pages.ProductCard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GameStarts.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductCard">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="NameProduct" Style="{StaticResource BigRedTextBlock}"/>
+        <Image x:Name="ProductImg" Grid.Row="1" Grid.RowSpan="2"/>
+        <ScrollViewer  VerticalScrollBarVisibility="Auto" Grid.Row="3" Grid.ColumnSpan="2">
+            <TextBlock x:Name="Description" TextWrapping="Wrap" Style="{StaticResource JustText}"/>
+        </ScrollViewer>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Grid.Row="4" Grid.ColumnSpan="3">
+            <StackPanel x:Name="AdditionStackPanel" Orientation="Horizontal" HorizontalAlignment="Center"/>
+        </ScrollViewer>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2">
+            <StackPanel x:Name="CategoriesStackPanel"/>
+        </ScrollViewer>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
+            <TextBlock x:Name="PriceTextBlock" Text="Цена: 0 руб." />
+            <TextBlock x:Name="MinAgeTextBlock" Text="Минимальный возраст: 0"/>
+            <TextBlock x:Name="MinCountTextBlock" Text="Минимальное кол-во игроков: 1"/>
+            <TextBlock x:Name="MaxCountTextBlock" Text="Максимальное кол-во игроков: -"/>
+            <TextBlock x:Name="AvrTimeTextBLock" Text="Среднее время игры: 0:00:00"/>
+        </StackPanel>
+        <Button x:Name="AddToCartButton" Content="В корзину" Grid.Row="1" Grid.Column="2" Click="AddToCartButton_Click"/>
+    </Grid>
+</Page>

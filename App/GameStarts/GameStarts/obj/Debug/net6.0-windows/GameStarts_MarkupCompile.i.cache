@@ -1,0 +1,20 @@
+﻿GameStarts
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Temp\pcs01\курсовая\Ты будешь плакать\GameStarts\GameStarts\obj\Debug\net6.0-windows\
+GameStarts
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Temp\pcs01\курсовая\Ты будешь плакать\GameStarts\GameStarts\App.xaml
+10618632341
+
+34-1684168025
+2252090705773
+MainWindow.xaml;Pages\AdditionCard.xaml;Pages\CartPage.xaml;Pages\FinalPage.xaml;Pages\LoginPage.xaml;Pages\MainPage.xaml;Pages\OrderingPage.xaml;Pages\ProductCard.xaml;Pages\UserPage.xaml;SetterDialog.xaml;
+
+True
+

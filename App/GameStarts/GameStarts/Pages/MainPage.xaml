@@ -1,0 +1,49 @@
+﻿<Page x:Class="GameStarts.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GameStarts.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Поиск: " Style="{StaticResource JustText}"/>
+                <TextBox x:Name="NameTextBox" Width="300" />
+                <Button Content="Найти>" Click="Button_Click" Style="{StaticResource SmallUpButton}"/>
+            </StackPanel>
+            <Label x:Name="InfoLabel" Content="Самые популярные игры за последнее время:"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <WrapPanel  x:Name="BoardGameWrapPanel" />
+        </ScrollViewer>
+        <ScrollViewer Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" >
+            <StackPanel Grid.RowSpan="2" Background="#FF7B2525">
+                <TextBlock Text="Категории:" Style="{StaticResource WhiteTextBlock}"/>
+                <StackPanel x:Name="CategoryStackPanel" />
+                <TextBlock Text="Жанры:" Style="{StaticResource WhiteTextBlock}"/>
+                <StackPanel x:Name="GenreStackPanel"/>
+                <TextBlock Text="Кол-во игроков:" Style="{StaticResource WhiteTextBlock}"/>
+                <TextBlock x:Name="CountTextBlock" Text="Любое" HorizontalAlignment="Right" Style="{StaticResource WhiteTextBlock}"/>
+                <Slider x:Name="CountSlider" Minimum="0" Maximum="18" ValueChanged="CountSlider_ValueChanged" />
+                <TextBlock Text="Возраст игроков:" Style="{StaticResource WhiteTextBlock}"/>
+                <TextBlock x:Name="AgeTextBlock" Text="Любой" HorizontalAlignment="Right" Style="{StaticResource WhiteTextBlock}"/>
+                <Slider x:Name="AgeSlider" Minimum="-1" Maximum="18" ValueChanged="AgeSlider_ValueChanged" Value="-1"/>
+                <Button Content="Найти>" Click="Button_Click" Style="{StaticResource UpButton}"/>
+                <Button x:Name="ReLoadButton" Content="Обновить" Style="{StaticResource UpButton}" Click="ReLoadButton_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Image Grid.ColumnSpan="2" />
+    </Grid>
+</Page>
